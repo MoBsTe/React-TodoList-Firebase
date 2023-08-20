@@ -29,6 +29,7 @@
     background-image: url("./images/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 /* User */
@@ -65,6 +66,7 @@
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
+    z-index: 99;
 }
 
 .Modal .container {
@@ -351,4 +353,83 @@
 
 .Project .btns .edit-delete span.delete:hover {
     background: #ffacac;
+}
+
+/*AddNewProject */
+.AddNewProject .add-button span {
+    margin-right: 5px;
+}
+
+/*ProjectForm*/
+.ProjectForm {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.ProjectForm input {
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.ProjectForm input:focus {
+    outline: none;
+    border-bottom: 1px solid #0080ff;
+}
+
+.ProjectForm button {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 50%;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 300ms ease-in-out;
+}
+
+.ProjectForm button.cancel {
+    left: 0;
+    background-color: #bebebe;
+}
+
+.ProjectForm button.confirm {
+    right: 0;
+    background-color: #0080ff;
+}
+
+.ProjectForm button:hover {
+    filter: brightness(1.1);
+}
+
+/* Todos */
+.Todos {
+    width: 450px;
+    height: 80%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    border-radius: 4px;
+    opacity: 0.9;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.Todos .selected-project {
+    margin: 1rem 0;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.Todos .todos {
+    overflow-y: auto;
 }
